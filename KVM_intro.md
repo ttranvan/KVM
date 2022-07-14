@@ -17,4 +17,22 @@ QEMU ban đầu không phải là thành phần của KVM, nó là hệ thống 
 
  *Nên có thể coi, QEMU như là một hypervisor type 2 (hypervisor chỉ chung cho chức năng ảo hóa). Nhằm nâng cao hiệu suất của VM. Cụ thể, lúc tạo VM bằng QEMU có VirtType là KVM thì khi đó các instruction có nghĩa đối với virtual CPU sẽ được QEMU sử dụng KVM để mapping thành các instruction có nghĩa đối với physical CPU. Làm như vậy sẽ nhanh hơn là chỉ chạy độc lập QEMU, vì nếu không có KVM thì QEMU sẽ phải quay về (fall-back) sử dụng translator của riêng nó là TCG để chuyển dịch các instruction của virtual CPU rồi đem thực thi trên physical CPU.*
 <img src=https://s8.gifyu.com/images/image25271741fc94e209.png>
+
+# 2.Các tool điều khiển KVM-QEMU
+
+- virsh : libvirt-based  CLI
+- virt-manager:  libvirt-based GUI
+- svirt: Security tools
+- virt-v2v: công cụ format migrate VM
+- virt-* tools: bao gồm virt-install (Tạo VM), Virt-viewer ...
+- libvirt: API ảo hóa để vận hành và quản lý các máy ảo KVM. Tương thích nhiều loại hypervisor:  KVM, vmware, XEN, Hyper-v, LXC, etc ..
+
+*Đối với từng dạng ảo hóa như Kvm, Xen, .. sẽ có một tiến trình Libvirt chạy để điều khiển các dang ảo hóa và cung cấp những API để các tool như virsh, virt-manager, Openstack, ovirt có thể giao tiếp với KVM-Qemu thông qua livbirt*
+
+<img src=https://s8.gifyu.com/images/image97ce7da0c4b58017.png>
 ## 1.2 Các tính năng của ảo hóa KVM
+
+ - Hỗ trợ CPU và MEM overcommit: Overcommit được hiểu là việc mapping CPU, RAM, DISK lên vài lần hoặc vài chục lần. [overcommit](https://github.com/ttranvan/KVM/blob/main/overcommit.md)
+ - Hỗ trợ Paravirtualized I/O (virtio):là một chuẩn ảo hóa cho các thiết bị mạng và đĩa cứng. Nói một cách dễ hiểu thì virtio làm cho máy ảo biết nó là máy ảo, và vì thế sẽ hợp tác với trình ảo hóa  để tăng tốc các thiết bị mạng và ổ cứng (còn bình thường nó sẽ chạy như một máy thật, sử dụng các thiết bị ảo, các thiết bị này rất phức tạp, khiến cho tốc độ chậm...) https://www.linux-kvm.org/page/Virtio
+ 
+
