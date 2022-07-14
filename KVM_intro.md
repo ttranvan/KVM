@@ -30,9 +30,12 @@ QEMU ban đầu không phải là thành phần của KVM, nó là hệ thống 
 *Đối với từng dạng ảo hóa như Kvm, Xen, .. sẽ có một tiến trình Libvirt chạy để điều khiển các dang ảo hóa và cung cấp những API để các tool như virsh, virt-manager, Openstack, ovirt có thể giao tiếp với KVM-Qemu thông qua livbirt*
 
 <img src=https://s8.gifyu.com/images/image97ce7da0c4b58017.png>
-## 1.2 Các tính năng của ảo hóa KVM
+
+# 3 Các tính năng của ảo hóa KVM
 
  - Hỗ trợ CPU và MEM overcommit: Overcommit được hiểu là việc mapping CPU, RAM, DISK lên vài lần hoặc vài chục lần. [overcommit](https://github.com/ttranvan/KVM/blob/main/overcommit.md)
- - Hỗ trợ Paravirtualized I/O (virtio):là một chuẩn ảo hóa cho các thiết bị mạng và đĩa cứng. Nói một cách dễ hiểu thì virtio làm cho máy ảo biết nó là máy ảo, và vì thế sẽ hợp tác với trình ảo hóa  để tăng tốc các thiết bị mạng và ổ cứng (còn bình thường nó sẽ chạy như một máy thật, sử dụng các thiết bị ảo, các thiết bị này rất phức tạp, khiến cho tốc độ chậm...) https://www.linux-kvm.org/page/Virtio
- 
+ - Hỗ trợ Paravirtualized I/O (virtio):là một chuẩn ảo hóa cho các thiết bị mạng và đĩa cứng. Nói một cách dễ hiểu thì virtio làm cho máy ảo biết nó là máy ảo, và vì thế sẽ hợp tác với trình ảo hóa  để tăng tốc các thiết bị mạng và ổ cứng (còn bình thường nó sẽ chạy như một máy thật, sử dụng các thiết bị ảo, các thiết bị này rất phức tạp, khiến cho tốc độ chậm...) tham khảo: https://www.linux-kvm.org/page/Virtio
+- Hỗ trợ hot swap (CPU, Block device, network ..)
+- Hỗ trợ Live Migration : Cho phép di chuyển máy ảo không downtime 
+- Hỗ trợ PCI Device Direct Assignment and Single Root I/O Virtualization (SR-IOV)
 
