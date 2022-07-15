@@ -53,13 +53,8 @@
 
   -	Isolated network
 
-  -	Custom routed network
 
-  -	Custom NAT-based network
 
-  -	Multiple networks
-
-Trong phần này mình sẽ chỉ tìm hiểu bốn chế độ mạng chính trong libvirt.
 
 
 ## 1.2. Virtual network Switch 
