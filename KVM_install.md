@@ -1,3 +1,7 @@
+**Mục Lục**
+[1. Cài đặt](#1)
+[1.1 Kiểm tra CPU có hỗ trợ ảo hóa](#1.1)
+[1.2 Cài đặt các gói và phụ thuộc](#1.2)
 # 1. Cài đặt
 ## 1.1 Kiểm tra CPU có hỗ trợ ảo hóa:
 > $ egrep -c '(vmx|svm)' /proc/cpuinfo
