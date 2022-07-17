@@ -17,7 +17,9 @@ Trong đó:
 
 Kiểm tra trạng thái của libvirt:
 > sudo systemctl status libvirtd
+
 Cấu hình libvirtd chạy cùng hệ thống:
 >  sudo systemctl enable libvirtd
+
 Kiểm tra KVM đã được load:
 > lsmod | grep -i kvm
