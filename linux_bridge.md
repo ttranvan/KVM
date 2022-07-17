@@ -123,7 +123,7 @@ Linux bridge được hỗ trợ từ version nhân kernel từ 2.4 trở lên. 
 |creating bridge|	`brctl addbr <bridge>`| |	
 |deleting bridge|	`brctl delbr <bridge>`| |
 |add interface (port) to bridge	| `brctl addif <bridge> <ifname>`	| |
-|delete interface (port) on bridge |	`brctl delbr <bridge>`|  |	
+|delete interface (port) on bridge |	`brctl delif <bridge> <ifname>`|  |	
 
 
 ### FDB MANAGEMENT
