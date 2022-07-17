@@ -1,4 +1,5 @@
 # 1. Cài đặt
+<a name= 1.1 a>
 ## 1.1 Kiểm tra CPU có hỗ trợ ảo hóa:
 > $ egrep -c '(vmx|svm)' /proc/cpuinfo
 >  sudo kvm-ok
