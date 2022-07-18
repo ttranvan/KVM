@@ -28,3 +28,11 @@ Cấu hình libvirtd chạy cùng hệ thống:
 
 Kiểm tra KVM đã được load:
 > lsmod | grep -i kvm
+## 1.3 Tạo VM
+
+> virt-install --name ubuntu1 --description test --ram 512 --vcpus 2 --cdrom /var/lib/libvirt/images/ubuntu-18.04.3-live-server-amd64.iso --disk path=/var/lib/libvirt/images/ubuntu1.qcow2,size=15
+
+*để console vào vm bằng cmd: enable ttyS0 trên VM:
+>  systemctl enable serial-getty@ttyS0.service
+>  systemctl start serial-getty@ttyS0.service
+*
