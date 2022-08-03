@@ -5,7 +5,7 @@
 config: Cấu hình nat ra interface ens33 trên Host và tạo bridge virbr5
 
 
-    <network>
+'''<network>
   <name>nat2</name>
   <uuid>43c613e4-18a4-4857-bdfe-84af0299c511</uuid>
   <forward dev='ens33' mode='nat'>
@@ -18,5 +18,5 @@ config: Cấu hình nat ra interface ens33 trên Host và tạo bridge virbr5
       <range start='172.16.10.100' end='172.16.10.253'/>
     </dhcp>
   </ip>
-</network> 
+</network>''' 
 
