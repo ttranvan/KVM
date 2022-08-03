@@ -140,12 +140,12 @@ Làm theo các bước sau:
 
 Máy ảo VM muốn kết nối tới một mạng Bridged network thì chỉnh sửa cấu hình trong file xml như sau:
 
-''' 
+``` 
 <interface type="network">
    <source network="default"/>
    <mac address="52:54:00:4f:47:f2"/>
 </interface>
-'''
+```
 
 Sửa lại section `<interface>` thành như sau:
 
