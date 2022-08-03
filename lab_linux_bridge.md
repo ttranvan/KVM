@@ -3,6 +3,7 @@
 
 
 - config: Cấu hình nat ra interface ens33 trên Host và tạo bridge virbr5
+
 '<network>
   <name>nat2</name>
   <uuid>43c613e4-18a4-4857-bdfe-84af0299c511</uuid>
