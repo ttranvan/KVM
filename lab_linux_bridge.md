@@ -18,5 +18,5 @@ config: Cấu hình nat ra interface ens33 trên Host và tạo bridge virbr5
       <range start='172.16.10.100' end='172.16.10.253'/>
     </dhcp>
   </ip>
-</network>''' 
+</network>'''
 
